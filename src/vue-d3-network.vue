@@ -358,6 +358,12 @@ export default {
       this.dragStart(false)
     },
     // -- Render helpers
+    mouseOver (event, node) {
+      this.$emit('mouse-over', event, node)
+    },
+    mouseLeave (event, node) {
+      this.$emit('mouse-leave', event, node)
+    },
     nodeClick (event, node) {
       this.$emit('node-click', event, node)
     },
